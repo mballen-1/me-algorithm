@@ -25,7 +25,8 @@ func ParseInputString(nums []string) (n []int64, targetNumber int64, err error) 
 	if len(numsToInt) == 0 {
 		return numsToInt, 0, errors.New("Empty number list")
 	}
-	return numsToInt, numsToInt[len(numsToInt)-1], err
+	// [0 : len(numsToInt)-1] Separates the target number from the input array
+	return numsToInt[0 : len(numsToInt)-1], numsToInt[len(numsToInt)-1], err
 }
 
 func replaceAllWhiteSpaces(n string) string {

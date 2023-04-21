@@ -11,13 +11,13 @@ func FindSum2(nums []int64, target int64) map[int64]int64 {
 		fmt.Println("Array length <= 1, no pairs found")
 		return answers
 	}
-	slicedNums := nums[0 : len(nums)-1]
-	trackingMap, allNegativeNumbers := getTrackingMap(slicedNums)
+	numsToCheck := nums[0 : len(nums)-1]
+	trackingMap, allNegativeNumbers := getTrackingMap(numsToCheck)
 	if allNegativeNumbers && target > 0 { // No solution
 		return answers
 	}
 	// Check if complement of each number is inside map (O(n)), if true we have found a pair
-	for _, n := range slicedNums {
+	for _, n := range numsToCheck {
 		complement := target - n
 		if _, found := trackingMap[complement]; found { // pair found
 			updateAnswersMap(n, complement, &answers)
