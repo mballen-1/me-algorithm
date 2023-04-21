@@ -4,10 +4,11 @@
 
 ### Using Docker:
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-2. Go to the project root directory `(me-algorithm)` after cloning it.
-2. Using your terminal run `docker build --tag me-algorithm .` from the same location.
-3. Run `docker run -i me-algorithm` 
-4. Follow the program instructions and copy-paste (or type) the input content you want to test.
+2. Clone this [project](https://github.com/mballen-1/me-algorithm.git).
+3. Go to the project root directory `(me-algorithm)`.
+4. Using your terminal run `docker build --tag me-algorithm .` from the same location.
+5. Run `docker run -i me-algorithm` 
+6. Follow the program instructions and copy-paste (or type) the input content you want to test.
 - Stop the container when you are done testing (ctrl+c / cmd+c).
 
 ### Using a local installation of Go
